@@ -97,10 +97,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         body: Container(
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                opacity: 0.3,
+                image: AssetImage(
+                  "assets/bg.png",
+                ),
+              ),
               gradient: LinearGradient(colors: [
-            Color(0xff000000),
-            Color(0xff81B2DC),
-          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+                Color(0xff000000),
+                Color(0xff81B2DC),
+              ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
           child: SingleChildScrollView(
             child: Container(
               height: MediaQuery.of(context).size.height,
